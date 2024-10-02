@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "189b2d1cd4c417ede3eb6ae80db71f4c",
+      "MD5-CAM-1.0.1" : "d15be8a03dba2c2f98025e1a489d7433",
       "PARENT:MD5-CAM-1.0.1" : "2159b0a6fbf59687c98043da23fadcc6"
     },
     "details" : {
@@ -62,41 +62,6 @@
       "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "content",
       "children" : [ {
-        "@type" : "ARCHETYPE_SLOT",
-        "rmTypeName" : "GENERIC_ENTRY",
-        "occurrences" : "0..*",
-        "nodeId" : "at0006",
-        "includes" : [ {
-          "@type" : "ASSERTION",
-          "stringExpression" : "archetype_id/value matches {/.*|openEHR-EHR-GENERIC_ENTRY\\.date_and_time\\.v0|openEHR-EHR-GENERIC_ENTRY\\.diagnos\\.v0/}",
-          "expression" : {
-            "@type" : "BINARY_OPERATOR",
-            "type" : "BOOLEAN",
-            "operator" : "matches",
-            "leftOperand" : {
-              "@type" : "MODEL_REFERENCE",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Attribute",
-              "path" : "archetype_id/value"
-            },
-            "rightOperand" : {
-              "@type" : "CONSTRAINT",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Constraint",
-              "item" : {
-                "@type" : "C_STRING",
-                "constraint" : [ "/.*|openEHR-EHR-GENERIC_ENTRY\\.date_and_time\\.v0|openEHR-EHR-GENERIC_ENTRY\\.diagnos\\.v0/" ]
-              }
-            },
-            "precedenceOverriden" : false
-          },
-          "variables" : [ ]
-        } ],
-        "excludes" : [ ],
-        "closed" : false
-      }, {
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "GENERIC_ENTRY",
         "occurrences" : "0..1",
@@ -164,7 +129,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "afd1470e4bf81a5cd775b2f0012fcf89"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-GENERIC_ENTRY.free_text.v0",
     "differential" : true,
@@ -187,6 +165,25 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0009.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "defaultValue" : {
+                    "value" : "282",
+                    "@type" : "DV_TEXT"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0003.1",
@@ -261,7 +258,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "afd1470e4bf81a5cd775b2f0012fcf89"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-GENERIC_ENTRY.free_text.v0",
     "differential" : true,
@@ -325,7 +335,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "afd1470e4bf81a5cd775b2f0012fcf89"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-GENERIC_ENTRY.free_text.v0",
     "differential" : true,
