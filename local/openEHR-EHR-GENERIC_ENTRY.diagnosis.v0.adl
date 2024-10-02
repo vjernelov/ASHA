@@ -23,12 +23,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3c6e5a5675778e055ab5b27e345eddc8">
+		["MD5-CAM-1.0.1"] = <"a2523749634a3119d94e8ede217b80cd">
 		["build_uid"] = <"9759c210-0743-3c16-9bfb-b3a23812be66">
 	>
 
 definition
-	GENERIC_ENTRY[at0000] matches {    -- diagnosis
+	GENERIC_ENTRY[at0000] matches {    -- Diagnosis
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
@@ -72,7 +72,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"diagnosis">
+					text = <"Diagnosis">
 					description = <"Diagnos">
 				>
 				["at0001"] = <
