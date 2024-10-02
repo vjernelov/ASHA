@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"95e3091284ccd6d895e16ec62faef7f4">
+		["MD5-CAM-1.0.1"] = <"d812d13c713e011f1454b77929c44179">
 		["build_uid"] = <"4804ef88-8c4f-3d37-95be-d9f58e8a40dd">
 	>
 
@@ -39,19 +39,18 @@ definition
 		context matches {
 			EVENT_CONTEXT matches {
 				other_context matches {
-					ITEM_TREE[at0001] matches {    -- Item tree
-						items cardinality matches {0..*; unordered} matches {
-							allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- Tooltypes
-								include
-									archetype_id/value matches {/.*/}
-							}
-							allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Observations
-								include
-									archetype_id/value matches {/.*/}
-							}
-						}
-					}
+					ITEM_TREE[at0001] matches {*}    -- Item tree
 				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype GENERIC_ENTRY[at0006] occurrences matches {0..*} matches {    -- Tooltypes
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype OBSERVATION[at0007] occurrences matches {0..*} matches {    -- Observations
+				include
+					archetype_id/value matches {/.*/}
 			}
 		}
 	}
@@ -68,11 +67,11 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0004"] = <
+				["at0006"] = <
 					text = <"Tooltypes">
 					description = <"">
 				>
-				["at0005"] = <
+				["at0007"] = <
 					text = <"Observations">
 					description = <"">
 				>
