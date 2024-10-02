@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"05cbe53917a3f55e96477c45c19f2b64">
+		["MD5-CAM-1.0.1"] = <"afd1470e4bf81a5cd775b2f0012fcf89">
 		["build_uid"] = <"233070ab-8ef2-37e1-87ba-823035ccbe0a">
 	>
 
@@ -32,9 +32,9 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- ID
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- ID
 						value matches {
-							DV_QUANTITY matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Term
@@ -74,10 +74,6 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0002"] = <
-					text = <"ID">
-					description = <"">
-				>
 				["at0003"] = <
 					text = <"Term">
 					description = <"">
@@ -92,6 +88,10 @@ ontology
 				>
 				["at0006"] = <
 					text = <"Concept">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"ID">
 					description = <"">
 				>
 			>
