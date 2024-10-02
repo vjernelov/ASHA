@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c0430de9f13ea1bedb22aec778cac984">
+		["MD5-CAM-1.0.1"] = <"14f23d91a4804c5dab98a55e55b4e9a5">
 		["build_uid"] = <"9759c210-0743-3c16-9bfb-b3a23812be66">
 	>
 
@@ -43,6 +43,11 @@ definition
 						}
 					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Value
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Type
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -92,6 +97,10 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Concept">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Type">
 					description = <"">
 				>
 			>
