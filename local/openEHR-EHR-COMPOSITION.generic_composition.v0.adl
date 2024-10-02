@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0adb5b7edeeb8502b24a71b9fbdd5f09">
+		["MD5-CAM-1.0.1"] = <"2159b0a6fbf59687c98043da23fadcc6">
 		["build_uid"] = <"4804ef88-8c4f-3d37-95be-d9f58e8a40dd">
 	>
 
@@ -46,7 +46,7 @@ definition
 		content cardinality matches {1..*; unordered} matches {
 			allow_archetype GENERIC_ENTRY[at0006] occurrences matches {0..*} matches {    -- Tooltypes
 				include
-					archetype_id/value matches {/.*|openEHR-EHR-GENERIC_ENTRY\.date_and_time\.v0|openEHR-EHR-GENERIC_ENTRY\.diagnos\.v0/}
+					archetype_id/value matches {/.*|openEHR-EHR-GENERIC_ENTRY\.date_and_time\.v0|openEHR-EHR-GENERIC_ENTRY\.diagnosis\.v0|openEHR-EHR-GENERIC_ENTRY\.numerical\.v0|openEHR-EHR-GENERIC_ENTRY\.coded_values\.v0|openEHR-EHR-GENERIC_ENTRY\.free_text\.v0/}
 			}
 			allow_archetype OBSERVATION[at0007] occurrences matches {0..*} matches {    -- Observations
 				include
