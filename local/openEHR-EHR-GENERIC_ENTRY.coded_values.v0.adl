@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"de57b2a7a68bcf874c082575d0d2301b">
+		["MD5-CAM-1.0.1"] = <"5b3adadf2129bdd076c6456569795a6d">
 		["build_uid"] = <"c96407b8-3f40-3db2-98c3-e369b8cec6bc">
 	>
 
@@ -89,11 +89,11 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Term">
-					description = <"">
+					description = <"Benämning på sökordet">
 				>
 				["at0005"] = <
 					text = <"Term">
-					description = <"">
+					description = <"Benämning på det fasta värdet">
 				>
 				["at0006"] = <
 					text = <"Numeric value">
