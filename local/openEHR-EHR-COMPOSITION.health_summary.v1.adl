@@ -167,7 +167,7 @@ Incluso si el contenido clínico no se ha restringido, este arquetipo soporta co
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"A0DA8D01B967B2B05FC941F6E389A94B">
+		["MD5-CAM-1.0.1"] = <"17e8c93643ad648bc0b59b410c180084">
 		["build_uid"] = <"8ec85a9a-64d7-42a2-8afe-0869243d39d7">
 		["revision"] = <"1.0.2">
 	>
@@ -195,6 +195,12 @@ definition
 				}
 			}
 		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0003] occurrences matches {0..*} matches {    -- Blood pressure
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure\.v2/}
+			}
+		}
 	}
 
 ontology
@@ -214,6 +220,10 @@ ontology
 					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
 					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
 				>
+				["at0003"] = <
+					text = <"Blood pressure">
+					description = <"">
+				>
 			>
 		>
 		["nb"] = <
@@ -230,6 +240,10 @@ ontology
 					text = <"Tilleggsinformasjon">
 					description = <"Ytterligere informasjon som er nødvendig for å registrere lokalt innhold/kontekst, eller for å sammenstille med andre referansemodeller/formalismer.">
 					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
+				>
+				["at0003"] = <
+					text = <"*Blood pressure (en)">
+					description = <"">
 				>
 			>
 		>
@@ -248,6 +262,10 @@ ontology
 					description = <"Información adicional requerida para capturar contenidos locales o para alinearse con otros modelos de referencia o formalismos.">
 					comment = <"Por ejemplo: requisitos de información locales o metadatos adicionales necesarios para alinearse con FHIR, CIMI o equivalentes.">
 				>
+				["at0003"] = <
+					text = <"*Blood pressure (en)">
+					description = <"">
+				>
 			>
 		>
 		["pt-br"] = <
@@ -265,6 +283,10 @@ ontology
 					description = <"Informações adicionais necessárias para capturar o conteúdo local ou para alinhar com outros modelos de referência/ formalismo.">
 					comment = <"Por exemplo: requisitos de informação local ou metadados adicionais para alinhar com equivalentes FHIR ou CIMI.">
 				>
+				["at0003"] = <
+					text = <"*Blood pressure (en)">
+					description = <"">
+				>
 			>
 		>
 		["sv"] = <
@@ -281,6 +303,10 @@ ontology
 					text = <"Tilläggsinformation">
 					description = <"Plats för tilläggsinformation som krävs för lokala anpassningar eller anpassning till andra referensmodeller eller formella krav.">
 					comment = <"Exempelvis lokala informationskrav eller metadata för anpassning till FHIR- eller CIMI-motsvarigheter.">
+				>
+				["at0003"] = <
+					text = <"*Blood pressure (en)">
+					description = <"">
 				>
 			>
 		>
