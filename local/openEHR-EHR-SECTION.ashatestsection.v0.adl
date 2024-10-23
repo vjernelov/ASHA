@@ -23,14 +23,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1c98820712b9d21524a7cea79d812fea">
+		["MD5-CAM-1.0.1"] = <"512efa0c70e79bef1d47f24108fdf923">
 		["build_uid"] = <"3ed40156-fe73-39ff-ab62-de209b7b6479">
 	>
 
 definition
 	SECTION[at0000] matches {    -- AshaTestSection
 		items cardinality matches {1..*; unordered} matches {
-			SECTION[at0001] occurrences matches {0..1} matches {*}    -- SECTION
 			allow_archetype GENERIC_ENTRY[at0003] occurrences matches {0..*} matches {    -- GenericEntryTooltypeSlot
 				include
 					archetype_id/value matches {/openEHR-EHR-GENERIC_ENTRY\.coded_values\.v0|openEHR-EHR-GENERIC_ENTRY\.free_text\.v0|openEHR-EHR-GENERIC_ENTRY\.numerical\.v0/}
@@ -49,10 +48,6 @@ ontology
 				["at0000"] = <
 					text = <"AshaTestSection">
 					description = <"AshaTestSection">
-				>
-				["at0001"] = <
-					text = <"SECTION">
-					description = <"">
 				>
 				["at0002"] = <
 					text = <"SectionSlot">
