@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1b4d76feee5deb1b28156486309bf72c">
+		["MD5-CAM-1.0.1"] = <"570266ba56be7edbed2b56c9f8686a50">
 		["build_uid"] = <"4804ef88-8c4f-3d37-95be-d9f58e8a40dd">
 	>
 
@@ -56,6 +56,10 @@ definition
 				include
 					archetype_id/value matches {/.*/}
 			}
+			allow_archetype SECTION[at0009] occurrences matches {0..*} matches {    -- SECTION
+				include
+					archetype_id/value matches {/.*/}
+			}
 		}
 	}
 
@@ -81,6 +85,10 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Evaluation">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"SECTION">
 					description = <"">
 				>
 			>
