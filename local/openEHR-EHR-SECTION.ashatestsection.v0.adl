@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ddb1a2764315327499a72b22d3aeba5c">
+		["MD5-CAM-1.0.1"] = <"90382e32b85bb9ba5c2787cde5194602">
 		["build_uid"] = <"3ed40156-fe73-39ff-ab62-de209b7b6479">
 	>
 
@@ -34,9 +34,13 @@ definition
 				items cardinality matches {1..*; unordered} matches {
 					allow_archetype SECTION[at0002] occurrences matches {0..*} matches {    -- SectionSlot
 						include
-							archetype_id/value matches {/.*/}
+							archetype_id/value matches {/openEHR-EHR-SECTION\.ashatestsection\.v0/}
 					}
 				}
+			}
+			allow_archetype GENERIC_ENTRY[at0003] occurrences matches {0..*} matches {    -- GenericEntryTooltypeSlot
+				include
+					archetype_id/value matches {/openEHR-EHR-GENERIC_ENTRY\.coded_values\.v0|openEHR-EHR-GENERIC_ENTRY\.free_text\.v0|openEHR-EHR-GENERIC_ENTRY\.numerical\.v0/}
 			}
 		}
 	}
@@ -55,6 +59,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"SectionSlot">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"GenericEntryTooltypeSlot">
 					description = <"">
 				>
 			>
