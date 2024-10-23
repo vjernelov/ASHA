@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"570266ba56be7edbed2b56c9f8686a50">
+		["MD5-CAM-1.0.1"] = <"616c5e1736bd22eab4277c3a2a8c2e35">
 		["build_uid"] = <"4804ef88-8c4f-3d37-95be-d9f58e8a40dd">
 	>
 
@@ -44,21 +44,9 @@ definition
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype GENERIC_ENTRY[at0006] occurrences matches {0..*} matches {    -- Tooltypes
+			allow_archetype SECTION[at0010] occurrences matches {0..*} matches {    -- SECTION
 				include
-					archetype_id/value matches {/.*|openEHR-EHR-GENERIC_ENTRY\.date_and_time\.v0|openEHR-EHR-GENERIC_ENTRY\.diagnosis\.v0|openEHR-EHR-GENERIC_ENTRY\.numerical\.v0|openEHR-EHR-GENERIC_ENTRY\.coded_values\.v0|openEHR-EHR-GENERIC_ENTRY\.free_text\.v0/}
-			}
-			allow_archetype OBSERVATION[at0007] occurrences matches {0..*} matches {    -- Observations
-				include
-					archetype_id/value matches {/.*/}
-			}
-			allow_archetype EVALUATION[at0008] occurrences matches {0..*} matches {    -- Evaluation
-				include
-					archetype_id/value matches {/.*/}
-			}
-			allow_archetype SECTION[at0009] occurrences matches {0..*} matches {    -- SECTION
-				include
-					archetype_id/value matches {/.*/}
+					archetype_id/value matches {/openEHR-EHR-SECTION\.ashatestsection\.v0/}
 			}
 		}
 	}
@@ -75,19 +63,7 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0006"] = <
-					text = <"Tooltypes">
-					description = <"">
-				>
-				["at0007"] = <
-					text = <"Observations">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"Evaluation">
-					description = <"">
-				>
-				["at0009"] = <
+				["at0010"] = <
 					text = <"SECTION">
 					description = <"">
 				>
