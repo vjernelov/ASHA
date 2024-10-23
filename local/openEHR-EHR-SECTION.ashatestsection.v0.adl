@@ -23,24 +23,21 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"90382e32b85bb9ba5c2787cde5194602">
+		["MD5-CAM-1.0.1"] = <"1c98820712b9d21524a7cea79d812fea">
 		["build_uid"] = <"3ed40156-fe73-39ff-ab62-de209b7b6479">
 	>
 
 definition
 	SECTION[at0000] matches {    -- AshaTestSection
 		items cardinality matches {1..*; unordered} matches {
-			SECTION[at0001] occurrences matches {0..1} matches {    -- SECTION
-				items cardinality matches {1..*; unordered} matches {
-					allow_archetype SECTION[at0002] occurrences matches {0..*} matches {    -- SectionSlot
-						include
-							archetype_id/value matches {/openEHR-EHR-SECTION\.ashatestsection\.v0/}
-					}
-				}
-			}
+			SECTION[at0001] occurrences matches {0..1} matches {*}    -- SECTION
 			allow_archetype GENERIC_ENTRY[at0003] occurrences matches {0..*} matches {    -- GenericEntryTooltypeSlot
 				include
 					archetype_id/value matches {/openEHR-EHR-GENERIC_ENTRY\.coded_values\.v0|openEHR-EHR-GENERIC_ENTRY\.free_text\.v0|openEHR-EHR-GENERIC_ENTRY\.numerical\.v0/}
+			}
+			allow_archetype SECTION[at0002] occurrences matches {0..*} matches {    -- SectionSlot
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.ashatestsection\.v0/}
 			}
 		}
 	}
