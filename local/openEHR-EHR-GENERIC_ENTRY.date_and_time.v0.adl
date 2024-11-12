@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ae2d545f857dd11c1cbad67fd46c5d2c">
+		["MD5-CAM-1.0.1"] = <"62b53476280887523f5a422900700125">
 		["build_uid"] = <"2f94f524-9f97-3e27-a846-ab4e44c99ea3">
 	>
 
@@ -45,7 +45,7 @@ definition
 					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Date and time
 						value matches {
 							DV_DATE_TIME matches {
-								value matches {yyyy-mm-ddThh:mm:ss}
+								value matches {yyyy-??-??TXX:XX:XX}
 							}
 						}
 					}
