@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3af9f1328ee38ab41b4409ccd591aace">
+		["MD5-CAM-1.0.1"] = <"b44d5f353600f8483e0edaed068909c2">
 		["build_uid"] = <"c96407b8-3f40-3db2-98c3-e369b8cec6bc">
 	>
 
@@ -100,11 +100,11 @@ ontology
 				>
 				["at0002"] = <
 					text = <"ID">
-					description = <"">
+					description = <"ID för sökordet">
 				>
 				["at0003"] = <
 					text = <"Term">
-					description = <"">
+					description = <"Term kopplad till sökordet">
 				>
 				["at0004"] = <
 					text = <"Value">
@@ -112,31 +112,33 @@ ontology
 				>
 				["at0005"] = <
 					text = <"Value">
-					description = <"">
+					description = <"Värde som har registrerats på sökordet">
+					comment = <"kallas Fast värde i Cosmic">
 				>
 				["at0006"] = <
 					text = <"Numeric value">
-					description = <"">
+					description = <"Numeriskt värde kopplat till värdet i Value">
 				>
 				["at0007"] = <
 					text = <"Terminology">
-					description = <"">
+					description = <"Terminologi som har använts för att binda begrepp till värdet">
 				>
 				["at0008"] = <
 					text = <"Concept">
-					description = <"">
+					description = <"Begrepp som har bundits till värdet">
 				>
 				["at0009"] = <
 					text = <"Comment">
-					description = <"">
+					description = <"Fält för fritext">
+					comment = <"Fältet finns som default på alla sökord, oavsett verktygstyp, såtillvida det inte har inaktiverats. Kallar det därför Comment för att inte förväxla det med exempelvis Value som är värdet kopplat till den specifika verktygstypen.">
 				>
 				["at0010"] = <
 					text = <"Terminology">
-					description = <"">
+					description = <"Terminologi som har använts för att binda begrepp till sökordet">
 				>
 				["at0011"] = <
 					text = <"Concept">
-					description = <"">
+					description = <"Begrepp som har bundits till sökordet">
 				>
 			>
 		>
